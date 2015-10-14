@@ -1,4 +1,6 @@
 require 'spec_helper'
+require 'rails_helper'
+
 
 describe User do
 
@@ -35,7 +37,7 @@ describe User do
       let(:user_for_invalid_password) { found_user.authenticate("invalid") }
 
       it { should_not eq user_for_invalid_password }
-      specify { expect(user_for_invalid_password).to be_false }
+      specify { expect(user_for_invalid_password).to be false }
     end
   end
 end
