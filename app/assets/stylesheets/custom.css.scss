@@ -165,16 +165,14 @@ aside {
 
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
-  width: 40em;
+  width: 100%;
   margin-bottom: 15px;
-  display: block;
   @include box_sizing;
+  min-width: 150px;
 }
-
 input {
   height: auto !important;
 }
-
 #error_explanation {
   color: #f00;
   ul {
@@ -182,8 +180,9 @@ input {
     margin: 0 0 18px 0;
   }
 }
-
-.field_with_errors {
-  @extend .control-label;
-  @extend .has-error;
+.span2 {
+  width: 150px !important;
+}
+.col-xs-4 {
+  left:33% !important;
 }
