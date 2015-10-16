@@ -14,10 +14,6 @@ describe "Static pages" do
       expect(page).to have_title("Ruby on Rails Tutorial Sample App")
     end
 
-    it "should not have a custom page title" do
-      visit root_path
-      expect(page).not_to have_title ("| Home")
-    end
   end
 
   describe "Help page" do

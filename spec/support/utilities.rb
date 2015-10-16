@@ -19,4 +19,5 @@ include ApplicationHelper
   match do |page|
     expect(page).to have_selector('div.alert.alert-error', text: message)
   end
+
 end

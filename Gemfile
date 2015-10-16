@@ -36,13 +36,22 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem "spork-rails"
   gem 'byebug'
   gem 'rspec-rails'
+  gem 'guard-rspec'
+  gem 'guard-spork'
+  gem 'spork', github: 'sporkrb/spork'
 end
 group :test do
   gem 'selenium-webdriver'
   gem 'capybara'
   gem 'factory_girl_rails'
+  gem 'cucumber-rails', :require => false
+  gem 'database_cleaner', github: 'bmabey/database_cleaner'
+  gem 'rb-fsevent', :require => false
+  gem 'growl'
+
 end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
