@@ -53,7 +53,6 @@ Spork.prefork do
 end
 Spork.each_run do
   Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
-
 end
 
 
@@ -62,6 +61,7 @@ end
 require 'capybara/rspec'
 Capybara.current_driver = :rack_test
 RSpec.configure do |config|
+  config.include Rails.application.routes.url_helpers
 
   config.expect_with :rspec do |expectations|
     # This option will default to `true` in RSpec 4. It makes the `description`

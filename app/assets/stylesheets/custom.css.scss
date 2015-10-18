@@ -1,3 +1,4 @@
+@import "bootstrap-sprockets";
 @import "bootstrap";
 /* mixins, variables, etc. */
 
@@ -188,4 +189,21 @@ input {
 }
 .dropdown-menu > li {
   display: block !important;
+}
+/* users index */
+
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-top: 1px solid lightslategray;
+    &:last-child {
+      border-bottom: 1px solid lightslategray;
+    }
+  }
+}
+.glyphicon.glyphicon-remove {
+  float: right;
 }
